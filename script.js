@@ -12,7 +12,7 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     };
 
     // Link to Google Apps Script that handles the data submission to Google Sheets
-    const scriptURL = 'https://script.google.com/macros/s/YOUR_GOOGLE_APPS_SCRIPT_ID/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwYQjN3jhYV3oIF8EIcOhzHE-Upt_TnoZFAxUsBwwkprV6rOon2mcMt2v1VG2m9RkJ9oA/exec';
 
     fetch(scriptURL, {
         method: 'POST',
