@@ -12,15 +12,15 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     };
 
     // Link to Google Apps Script that handles the data submission to Google Sheets
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwYQjN3jhYV3oIF8EIcOhzHE-Upt_TnoZFAxUsBwwkprV6rOon2mcMt2v1VG2m9RkJ9oA/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz9Rvo0VpVw-7LhcHAxMbgKqMnzmm5xsKR_tjrzOYWK3MsceJcgswWn3PIQeZCPftKVPw/exec';
 
     fetch(scriptURL, {
         method: 'POST',
-        mode: 'cors',
+        mode: 'cors', // Đảm bảo sử dụng mode 'cors' để xử lý yêu cầu từ domain khác
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json' // Đảm bảo gửi đúng kiểu dữ liệu
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData) // Chuyển form data thành JSON
     })
         .then(response => response.json())
         .then(result => {
@@ -29,5 +29,6 @@ document.getElementById("registrationForm").addEventListener("submit", function(
         })
         .catch(error => {
             document.getElementById("formResult").innerHTML = "Error submitting form!";
+            console.error('Error:', error);
         });
 });
