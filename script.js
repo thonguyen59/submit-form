@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             method: 'POST',
             mode: 'no-cors', // Sử dụng 'no-cors' để tránh lỗi CORS
             headers: {
-                'Content-Type': 'application/json' // Đảm bảo dữ liệu được gửi đi dưới dạng JSON
+                'Content-Type': 'application/json' // Đảm bảo dữ liệu được gửi đi dưới dạng JSON 7
             },
             body: JSON.stringify(formData) // Chuyển đổi đối tượng formData thành chuỗi JSON test - 6
         })
