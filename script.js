@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(() => {
                 document.getElementById("formResult").innerHTML = "Form submitted successfully!";
                 document.getElementById("formResult").classList.add("alert", "alert-success");
-                document.getElementById("registrationForm").reset(); // Xóa dữ liệu trong form sau khi submit thành công
+                document.getElementById("registrationForm").reset(); // Xóa dữ liệu trong form sau khi submit thành công khoong
             })
             .catch(error => {
                 document.getElementById("formResult").innerHTML = "Error submitting form!";
