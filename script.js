@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
             headers: {
                 'Content-Type': 'application/json' // Đảm bảo dữ liệu được gửi đi dưới dạng JSON
             },
-            body: JSON.stringify(formData) // Chuyển đổi đối tượng formData thành chuỗi JSON 3
+            body: JSON.stringify(formData) // Chuyển đổi đối tượng formData thành chuỗi JSON master
         })
             .then(() => {
                 document.getElementById("formResult").innerHTML = "Form submitted successfully!";
